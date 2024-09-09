@@ -16,14 +16,14 @@ body, html {
     justify-content: center;
     text-align: left;
     margin: 20px;
-    transition: top 0.5s ease, transform 0.5s ease; /* Add transition for smooth movement */
     position: relative;
     top: 50%; /* Start from the center */
     transform: translateY(-50%); /* Center vertically */
+    transition: top 0.5s ease, transform 0.5s ease; /* Add transition for smooth movement */
 }
 
-/* Move header container to the top when the class is added */
-.header-container.move-to-top {
+/* Move header container to the top when any button is clicked */
+.header-container.top {
     top: 0;
     transform: translateY(0); /* Move to the top */
 }
@@ -94,7 +94,7 @@ footer {
     width: 100%;
 }
 
-/* Style for the content container */
+/* Style for the content containers */
 .content-container {
     background: #fff;
     padding: 20px;
@@ -104,5 +104,34 @@ footer {
     text-align: left;
     width: 80%; /* Match the width of the header-container */
     max-width: 1200px; /* Optional: set a max-width */
-    display: none; /* Initially hidden */
+    opacity: 0; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease; /* Slow down transition for fade-in effect */
+    z-index: -1; /* Ensure content is behind other elements */
+}
+
+/* Show the content container when the corresponding button is clicked */
+.content-container.active {
+    opacity: 1; /* Show the content container */
+    z-index: 1; /* Bring content to the front */
+}
+
+/* Style for the toggle buttons */
+.toggle-button, .home-button {
+    cursor: pointer;
+    color: #000;
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.toggle-button:hover, .home-button:hover {
+    background: #e0e0e0;
 }

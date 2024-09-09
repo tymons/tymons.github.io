@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tymoteusz Cejrowski</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const moveButton = document.querySelector("#move-to-top-button");
-            const headerContainer = document.querySelector(".header-container");
-            const contentContainer = document.querySelector(".content-container");
-
-            moveButton.addEventListener("click", function(event) {
-                event.preventDefault();
-                headerContainer.classList.add("move-to-top");
-                contentContainer.style.display = "block";
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="header-container">
@@ -31,19 +18,31 @@
         <div class="vertical-line"></div>
         <nav>
             <ul>
-                <li><a href="sections/publications.html">Publications</a></li>
-                <li><a href="sections/projects.html">Projects</a></li>
-                <li><a href="sections/cv.html">CV</a></li>
-                <li><button id="move-to-top-button">Move to Top</button></li>
+                <li><button class="toggle-button" data-target="bio-content">Bio</button></li>
+                <li><button class="toggle-button" data-target="publications-content">Publications</button></li>
+                <li><button class="toggle-button" data-target="projects-content">Projects</button></li>
+                <li><button class="home-button">Home</button></li>
             </ul>
         </nav>
     </div>
-    <div class="content-container" style="display: none;">
-        <h2>Content</h2>
-        <p>This is the content that will be displayed when the button is clicked.</p>
+
+    <div class="content-container" id="bio-content">
+        <h2>Bio</h2>
+        <p>This is the bio content that will be displayed when the button is clicked.</p>
     </div>
+    <div class="content-container" id="publications-content">
+        <h2>Publications</h2>
+        <p>This is the publications content that will be displayed when the button is clicked.</p>
+    </div>
+    <div class="content-container" id="projects-content">
+        <h2>Projects</h2>
+        <p>This is the projects content that will be displayed when the button is clicked.</p>
+    </div>
+
     <footer>
         <p>&copy; 2024 Tymoteusz Cejrowski</p>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
