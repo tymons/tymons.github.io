@@ -109,7 +109,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: opacity 0.5s ease; /* Slow down transition for fade-in effect */
+    transition: opacity 0.5s ease, z-index 0s 0.5s; /* Smooth transition for opacity and delay z-index change */
     z-index: -1; /* Ensure content is behind other elements */
 }
 
@@ -117,6 +117,7 @@ footer {
 .content-container.active {
     opacity: 1; /* Show the content container */
     z-index: 1; /* Bring content to the front */
+    transition: opacity 0.5s ease, z-index 0s; /* Smooth transition for opacity and immediate z-index change */
 }
 
 /* Style for the toggle buttons */
