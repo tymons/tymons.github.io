@@ -5,7 +5,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the top */
     background: linear-gradient(to bottom, white 70%, grey 100%);
 }
 
@@ -15,7 +15,17 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align: left;
-    margin: auto 20px;
+    margin: 20px;
+    transition: top 0.5s ease, transform 0.5s ease; /* Add transition for smooth movement */
+    position: relative;
+    top: 50%; /* Start from the center */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+/* Move header container to the top when the class is added */
+.header-container.move-to-top {
+    top: 0;
+    transform: translateY(0); /* Move to the top */
 }
 
 /* Style for the bio-container */
@@ -68,9 +78,13 @@ nav ul li {
     margin: 0 10px;
 }
 
-nav ul li a {
+nav ul li a, nav ul li button {
     text-decoration: none;
     color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
 }
 
 /* Style for the footer */
@@ -80,7 +94,7 @@ footer {
     width: 100%;
 }
 
-/* Style for the publications container */
+/* Style for the content container */
 .content-container {
     background: #fff;
     padding: 20px;
@@ -88,50 +102,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 30vw;
-}
-
-/* Style for the round avatar image */
-.round-avatar {
-    border-radius: 50%;
-    width: 10vw; /* Adjust the size as needed */
-    height: auto;
-    margin-right: 20px;
-}
-
-/* Style for the summary container */
-.summary-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 600px;
-}
-
-/* Ensure the header takes the full width */
-header {
-    width: 100%;
-    text-align: center;
-}
-
-/* Style for the navigation */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-}
-
-/* Style for the footer */
-footer {
-    margin-top: auto;
-    text-align: center;
-    width: 100%;
+    width: 80%; /* Match the width of the header-container */
+    max-width: 1200px; /* Optional: set a max-width */
+    display: none; /* Initially hidden */
 }

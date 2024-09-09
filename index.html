@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tymoteusz Cejrowski</title>
-	<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tymoteusz Cejrowski</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const moveButton = document.querySelector("#move-to-top-button");
+            const headerContainer = document.querySelector(".header-container");
+            const contentContainer = document.querySelector(".content-container");
+
+            moveButton.addEventListener("click", function(event) {
+                event.preventDefault();
+                headerContainer.classList.add("move-to-top");
+                contentContainer.style.display = "block";
+            });
+        });
+    </script>
 </head>
 <body>
-		<div class="header-container">
-			<div class="bio-container">
-				<img src="images/me.jpg" alt="Profile Picture" class="round-avatar">
-				<div class="summary-container">
-					<h1>Tymoteusz Cejrowski</h1>
-					<p class="summary">Add your summary here</p>
-				</div>
-			</div>
-			<div class="vertical-line"></div>
-			<nav>
-				<ul>
-					<li><a href="sections/publications.html">Publications</a></li>
-					<li><a href="sections/projects.html">Projects</a></li>
-					<li><a href="sections/cv.html">CV</a></li>
-				</ul>
-			</nav>
-		</div>
-	<footer>
-		<p>&copy; 2024 Tymoteusz Cejrowski</p>
-	</footer>
+    <div class="header-container">
+        <div class="bio-container">
+            <img src="images/me.jpg" alt="Profile Picture" class="round-avatar">
+            <div class="summary-container">
+                <h1>Tymoteusz Cejrowski</h1>
+                <p class="summary">Add your summary here</p>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+        <nav>
+            <ul>
+                <li><a href="sections/publications.html">Publications</a></li>
+                <li><a href="sections/projects.html">Projects</a></li>
+                <li><a href="sections/cv.html">CV</a></li>
+                <li><button id="move-to-top-button">Move to Top</button></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content-container" style="display: none;">
+        <h2>Content</h2>
+        <p>This is the content that will be displayed when the button is clicked.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tymoteusz Cejrowski</p>
+    </footer>
 </body>
 </html>
