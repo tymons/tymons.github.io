@@ -7,6 +7,10 @@ body, html {
     align-items: center;
     justify-content: flex-start; /* Align items to the top */
     background: linear-gradient(to bottom, white 70%, grey 100%);
+    font-family: "Reddit Sans Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* Style for the header container */
@@ -87,7 +91,6 @@ nav ul li a, nav ul li button {
     font: inherit;
 }
 
-/* Style for the footer */
 footer {
     margin-top: auto;
     text-align: center;
@@ -124,15 +127,23 @@ footer {
 .toggle-button, .home-button {
     cursor: pointer;
     color: #000;
-    background: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 5px 5px;
     margin: 10px;
     display: inline-block;
     text-align: center;
-    transition: background 0.3s ease;
 }
 
-.toggle-button:hover, .home-button:hover {
-    background: #e0e0e0;
+/* Style for the active button */
+.active-button {
+    text-decoration: underline;
+}
+
+/* Hide the home button by default */
+.home-button {
+    display: none;
+}
+
+/* Show the home button when it has the visible class */
+.home-button.visible {
+    display: inline-block;
 }

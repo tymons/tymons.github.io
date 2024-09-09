@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     content.classList.remove('active');
                 }
             });
+            buttons.forEach(btn => btn.classList.remove('active-button'));
+            this.classList.add('active-button');
             header.classList.add('top');
+            homeButton.classList.add('visible');
         });
     });
 
@@ -22,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         contents.forEach(content => {
             content.classList.remove('active');
         });
+        buttons.forEach(btn => btn.classList.remove('active-button'));
         header.classList.remove('top');
+        homeButton.classList.remove('visible');
     });
 });
