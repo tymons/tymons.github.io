@@ -54,7 +54,7 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 600px;
+    max-width: 300px;
 }
 
 /* Style for the vertical line */
