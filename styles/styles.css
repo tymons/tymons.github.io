@@ -65,7 +65,6 @@ body, html {
     margin: 0 20px;
 }
 
-/* Ensure the header takes the full width */
 header {
     width: 100%;
     text-align: center;
@@ -100,13 +99,15 @@ footer {
 /* Style for the content containers */
 .content-container {
     background: #fff;
-    padding: 20px;
-    margin: 20px;
+    padding: 20px; /* Reduce padding */
+    margin: 10px; /* Reduce margin */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 50%; /* Match the width of the header-container */
     max-width: 1200px; /* Optional: set a max-width */
+    max-height: 500px; /* Optional: set a max-height */
+    overflow: auto; /* Ensure content fits within the container */
     opacity: 0; /* Initially hidden */
     position: absolute;
     top: 50%;
@@ -114,6 +115,18 @@ footer {
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease, z-index 0s 0.5s; /* Smooth transition for opacity and delay z-index change */
     z-index: -1; /* Ensure content is behind other elements */
+}
+
+/* Style for the text within the content container */
+.content-container h2, .content-container h3, .content-container h4, .content-container p, .content-container ul {
+    margin: 5px 0; /* Reduce margin */
+    line-height: 1.5; /* Adjust line height for more compact text */
+    padding: 0; /* Remove padding */
+}
+
+.content-container ul {
+    list-style-type: none; /* Remove list bullets */
+    padding-left: 20px; /* Add padding to indent nested lists */
 }
 
 /* Show the content container when the corresponding button is clicked */
@@ -135,7 +148,7 @@ footer {
 
 /* Style for the active button */
 .active-button {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Hide the home button by default */
