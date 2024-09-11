@@ -137,7 +137,7 @@ footer {
 }
 
 /* Style for the toggle buttons */
-.toggle-button, .home-button {
+.toggle-button {
     cursor: pointer;
     color: #000;
     padding: 5px 5px;
@@ -149,14 +149,4 @@ footer {
 /* Style for the active button */
 .active-button {
     font-weight: bold;
-}
-
-/* Hide the home button by default */
-.home-button {
-    display: none;
-}
-
-/* Show the home button when it has the visible class */
-.home-button.visible {
-    display: inline-block;
 }
