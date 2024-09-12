@@ -65,11 +65,6 @@ body, html {
     margin: 0 20px;
 }
 
-header {
-    width: 100%;
-    text-align: center;
-}
-
 /* Style for the navigation */
 nav ul {
     list-style-type: none;
@@ -104,13 +99,13 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 50%; /* Match the width of the header-container */
+    width: 40%; /* Match the width of the header-container */
     max-width: 1200px; /* Optional: set a max-width */
-    max-height: 500px; /* Optional: set a max-height */
+    max-height: 700px; /* Optional: set a max-height */
     overflow: auto; /* Ensure content fits within the container */
     opacity: 0; /* Initially hidden */
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease, z-index 0s 0.5s; /* Smooth transition for opacity and delay z-index change */
@@ -127,6 +122,21 @@ footer {
 .content-container ul {
     list-style-type: none; /* Remove list bullets */
     padding-left: 20px; /* Add padding to indent nested lists */
+}
+
+/* Add bullet points to h4 elements */
+.content-container h4 {
+    position: relative;
+    padding-left: 20px; /* Add space for the bullet */
+}
+
+.content-container h4::before {
+    content: '•'; /* Bullet character */
+    position: absolute;
+    left: 0;
+    color: black; /* Adjust the color as needed */
+    font-size: 1.2em; /* Adjust the size as needed */
+    line-height: 1; /* Ensure the bullet is vertically centered */
 }
 
 /* Show the content container when the corresponding button is clicked */
