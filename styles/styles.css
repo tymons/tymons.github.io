@@ -160,3 +160,9 @@ footer {
 .active-button {
     font-weight: bold;
 }
+
+.company-logo {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
