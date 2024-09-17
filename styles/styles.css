@@ -166,3 +166,13 @@ footer {
     height: 16px;
     border-radius: 50%;
 }
+
+/* Style for links in the publications content */
+#publications-content a {
+    text-decoration: none; /* Remove underline by default */
+    color: inherit; /* Inherit color from parent */
+}
+
+#publications-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
