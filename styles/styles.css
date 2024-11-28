@@ -57,6 +57,21 @@ body, html {
     max-width: 300px;
 }
 
+.social-icons {
+    margin-top: 5px;
+}
+
+.social-icons a {
+    margin: 0 3px; /* Add space between icons */
+    color: #000; /* Make icons black */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-icons a:hover {
+    color: #0073b1; /* Optional: Change color on hover */
+}
+
 /* Style for the vertical line */
 .vertical-line {
     width: 2px;
