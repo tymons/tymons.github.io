@@ -119,6 +119,10 @@ footer {
     padding: 0; /* Remove padding */
 }
 
+.content-container p {
+    margin-left: 2em; /* Shift to the left */
+}
+
 .content-container ul {
     list-style-type: none; /* Remove list bullets */
     padding-left: 20px; /* Add padding to indent nested lists */
