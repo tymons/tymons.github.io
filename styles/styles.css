@@ -127,11 +127,14 @@ footer {
     z-index: -1; /* Ensure content is behind other elements */
 }
 
-/* Style for the text within the content container */
-.content-container h2, .content-container h3, .content-container h4, .content-container p, .content-container ul {
-    margin: 5px 0; /* Reduce margin */
-    line-height: 1.5; /* Adjust line height for more compact text */
-    padding: 0; /* Remove padding */
+.content-container h2 {
+    margin-bottom: 25px 0;
+}
+
+.content-container h3, .content-container h4, .content-container p, .content-container ul {
+    margin: 5px 0;
+    line-height: 1.5;
+    padding: 0;
 }
 
 .content-container p {
