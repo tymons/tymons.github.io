@@ -189,6 +189,30 @@ footer {
     border-radius: 50%;
 }
 
+.project-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+.project-image {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    width: 30%; /* Adjust the width as needed */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.project-image img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-text {
+    flex: 1; /* Take up the remaining space */
+}
+
 /* Style for links in the publications content */
 #publications-content a {
     text-decoration: none; /* Remove underline by default */
