@@ -116,7 +116,6 @@ footer {
     text-align: left;
     width: 40%; /* Match the width of the header-container */
     max-width: 1200px; /* Optional: set a max-width */
-    max-height: 700px; /* Optional: set a max-height */
     overflow: auto; /* Ensure content fits within the container */
     opacity: 0; /* Initially hidden */
     position: absolute;
